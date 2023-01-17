@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --bghbtn: hsl(0, 0%, 95%);
+  --transparent: rgba(0, 0, 0, 0);
+  /* Fonts */
+  --f-heading: "Big Shoulders Display", cursive;
+  --f-paragraph: "Lexend Deca", sans-serif;
+}
+body {
+  background-color: var(--bghbtn);
+  margin: 0 auto;
+}
+.container {
+  margin: 90px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card {
+  padding: 45px;
+  color: var(--paragraphs);
+}
+.card h2 {
+  color: var(--bghbtn);
+  font-family: var(--f-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin: 30px auto 40px auto;
+}
+.card p {
+  color: var(--paragraphs);
+  font-family: var(--f-paragraph);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0 0 27px;
+}
+.card:nth-child(1) {
+  background-color: var(--orange);
+}
+.card:nth-child(2) {
+  background-color: var(--cyan);
+}
+.card:nth-child(3) {
+  background-color: var(--dark-cyan);
+}
+.card button {
+  font-family: var(--f-paragraph);
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--bghbtn);
+  border: 2px solid var(--transparent);
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+.card:nth-child(1) button {
+  color: var(--orange);
+}
+.card:nth-child(2) button {
+  color: var(--cyan);
+}
+.card:nth-child(3) button {
+  color: var(--dark-cyan);
+}
+.card button:hover {
+  background-color: var(--transparent);
+  border: 2px solid var(--bghbtn);
+  color: var(--bghbtn);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width: 768px) {
+  main {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 915px;
+    height: 100%;
+    margin: 170px auto;
+  }
+  .card p {
+    margin: 0 0 80px;
+  }
+}
