@@ -26,7 +26,7 @@ body {
   padding: 45px;
   color: var(--paragraphs);
 }
-.card h2 {
+.card h1 {
   color: var(--bghbtn);
   font-family: var(--f-heading);
   font-weight: 700;
