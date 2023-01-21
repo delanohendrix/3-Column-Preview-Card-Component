@@ -14,8 +14,24 @@ body {
   background-color: var(--bghbtn);
   margin: 0 auto;
 }
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 .container {
-  margin: 90px 25px;
+  margin: 90px auto;
+  max-width: 325px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,12 +42,12 @@ body {
   padding: 45px;
   color: var(--paragraphs);
 }
-.card h1 {
+.card h2 {
   color: var(--bghbtn);
   font-family: var(--f-heading);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 36px;
   margin: 30px auto 40px auto;
 }
 .card p {
@@ -51,7 +67,8 @@ body {
 .card:nth-child(3) {
   background-color: var(--dark-cyan);
 }
-.card button {
+.card a {
+  display: inline-block;
   font-family: var(--f-paragraph);
   font-weight: 400;
   font-size: 15px;
@@ -59,17 +76,18 @@ body {
   border: 2px solid var(--transparent);
   padding: 15px 30px;
   border-radius: 30px;
+  text-decoration: none;
 }
-.card:nth-child(1) button {
+.card:nth-child(1) a {
   color: var(--orange);
 }
-.card:nth-child(2) button {
+.card:nth-child(2) a {
   color: var(--cyan);
 }
-.card:nth-child(3) button {
+.card:nth-child(3) a {
   color: var(--dark-cyan);
 }
-.card button:hover {
+.card a:hover {
   background-color: var(--transparent);
   border: 2px solid var(--bghbtn);
   color: var(--bghbtn);
@@ -82,12 +100,6 @@ body {
   color: hsl(228, 45%, 44%);
 }
 @media only screen and (min-width: 768px) {
-  main {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .container {
     position: relative;
     display: grid;
